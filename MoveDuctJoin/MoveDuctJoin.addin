@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Move Duct Join and Disconnect</Text>
+    <Description>Move a duct connector away from its original position along the duct centre line, disconnecting from the neighbour element.</Description>
+    <Assembly>MoveDuctJoin.dll</Assembly>
+    <FullClassName>MoveDuctJoin.CmdDisconnect</FullClassName>
+    <ClientId>f6724b19-72d2-423b-9b8f-914ee7b47cc0</ClientId>
+    <VendorId>TBC_</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>Move Duct Join and Reconnect</Text>
+    <Description>Move a duct connector away from its original position along the duct centre line and move the neighbour element to keep it connected.</Description>
+    <Assembly>MoveDuctJoin.dll</Assembly>
+    <FullClassName>MoveDuctJoin.CmdReconnect</FullClassName>
+    <ClientId>f2198abb-c46b-43ca-b10b-3bb881131ce5</ClientId>
+    <VendorId>TBC_</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
