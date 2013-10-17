@@ -79,7 +79,7 @@ namespace MoveDuctJoin
 
       // Determine connector closest to picked point
 
-      ConnectorSet connectors 
+      ConnectorSet connectors
         = duct.ConnectorManager.Connectors;
 
       Connector con = null;
@@ -100,7 +100,7 @@ namespace MoveDuctJoin
 
       Transform cs = con.CoordinateSystem;
 
-      Debug.Assert( 
+      Debug.Assert(
         con.Origin.IsAlmostEqualTo( cs.Origin ),
         "expected same origin" );
 
@@ -140,7 +140,7 @@ namespace MoveDuctJoin
     /// Return the connector 
     /// connected to the one given.
     /// </summary>
-    static Connector GetConnectedConnector( 
+    static Connector GetConnectedConnector(
       Connector con )
     {
       Connector neighbour = null;
@@ -245,7 +245,7 @@ namespace MoveDuctJoin
 
       // Determine neighbouring fitting
 
-      Connector neighbour 
+      Connector neighbour
         = GetConnectedConnector( con );
 
       // Modify document within a transaction
@@ -254,8 +254,8 @@ namespace MoveDuctJoin
       {
         tx.Start( "Move Fitting" );
 
-        ElementTransformUtils.MoveElement( 
-          doc, neighbour.Owner.Id, v ); 
+        ElementTransformUtils.MoveElement(
+          doc, neighbour.Owner.Id, v );
 
         tx.Commit();
       }
